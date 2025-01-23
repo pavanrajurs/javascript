@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>functions</title>
+</head>
+<body>
+<div><input type="number" name="A">
+  <input type="B" name="number">
+</div>
+
+<button onclick="l();">calculate</button>
+  <script>
+var x=1;
+a();
+b();
+console.log(x)
+
+function a() {
+var x=11;
+console.log(x);
+}
+console.log(x)  
+function b(){
+  var x=10;
+  console.log(x);
+}
+console.log(x);
+
+console.log(5 !== 5);
+
+//calling with argument
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+greet("Alice");  // Output: Hello, Alice!
+
+
+//returning with argument
+
+function add(a,b){
+  return a+b;
+}
+let sum=add(5,5);
+console.log(sum);
+
+//default parameters
+function greet(name = "Stranger") {
+  console.log("Hello, " + name + "!");
+}
+greet();
+
+//returning with argument
+function greet(a,b){
+  return a +b;
+}
+let suml=greet(5,6);
+console.log(suml);
+
+//arrow function 
+
+function j(){
+  console.log("after")
+}
+j();
+
+
+let v =  () => console.log("arrow");
+v();
+
+//arrow function with parameter
+let k =(name,age) => console.log(`hello ${name},your age is ${age}`);
+k("pavan",25)
+//func
+const func= ()=>({name:"jhon"});
+console.log(func().name)
+  </script>
+</body>
+</html>

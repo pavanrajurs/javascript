@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>objects</title>
+</head>
+
+<body>
+  <script>
+
+    //creation of objects
+    let person = {
+      name: 'John Doe',
+      age: 30
+    };
+
+    //deletion of objects
+    delete person.age;
+    console.log(person.age); // undefined
+    //
+    let gman="hello";
+    gman=gman.repeat(5)
+    if(gman){
+      console.log(`i wil reapeat${gman}`);
+    }else{
+      console.log("i will not repeat")
+    }
+
+    console.log(0-"1")
+    console.log(9<8)
+var p=0
+    if(isNaN(p)){
+      console.log("p is not a number")
+    }else{
+      console.log("p is a number")
+    }
+
+
+
+    //
+    function func1(){
+  setTimeout(()=>{
+    console.log(x);
+    console.log(y);
+  },3000);
+
+  var x = 2;
+  let y = 12;
+}
+func1();
+    
+    
+  </script>
+</body>
+
+</html>

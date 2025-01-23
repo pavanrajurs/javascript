@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAR</title>
+</head>
+
+<body>
+
+
+  <form>
+    <input type="text" id="myInput" name="myInput">
+    <input type="button" value="Submit" onclick="myFunction()">
+  </form>
+  <h1 style="color: blue;">hello world</h1>
+
+
+  <script>
+    let a = "alice";
+    function greet() {
+      let a = "bob";
+      console.log(a);
+
+    }
+    greet()
+    console.log(a);
+
+    //lexical
+    function a() {
+      var b = 10;
+      c();
+      function c() {
+
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>

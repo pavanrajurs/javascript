@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>variable</title>
+</head>
+<p id="hello3"></p>
+<p id="hello4"></p>
+
+<body>
+  <script>
+    //global scope
+    var c = 333;
+
+    function global() {
+      console.log(c);
+    }
+    global();
+
+    //function scope
+    function example() {
+      if (true) {
+        var x = 10; // Function-scoped, not block-scoped
+        console.log(x); // 10
+      }
+      console.log(x); // 10 (still accessible outside the block)
+    }
+    example();
+
+
+
+    //block scope
+    function example() {
+      if (true) {
+        let x = 10; // Function-scoped, not block-scoped
+        console.log(x); // 10
+      }
+      console.log(x); // 10 (not accessible outside the block)
+    }
+    example();
+
+//block scope and immutability (const)
+function example() {
+  if (true) {
+    const z = 30; // Block-scoped and immutable
+    console.log(z); // 30 (accessible inside the block)
+  }
+  console.log(z); // Error: z is not defined (not accessible outside the block)
+}
+example();
+
+
+    //Shadowing
+
+    var o = 909;
+    var o = 11;
+    console.log(o);
+
+
+    //hoisting
+
+    hello();
+    function hello() {
+      i = 90;
+      if (true) {
+        console.log(i);
+      }
+    }
+
+
+    //Module scope     
+    r = 12
+    function f1() {
+
+      console.log(r);
+    }
+    function f2() {
+      console.log(r);
+    }
+    f1();
+    f2();
+
+
+    //global variable within the function
+    let m = 10;
+
+    function f3() {
+      window.y = 3330;
+      window.x = 3230;
+      console.log(y);
+    }
+    function f4() {
+      console.log(y);
+    }
+    f3();
+    f4();
+    console.log(x, y);
+
+    const g = 19;
+    console.log(typeof (g));
+
+    console.log(`your a good guy${g}`);
+    // document.write(`your a good guy`+ " "+g);
+
+    // display variable
+
+    let fullname = "Pavan Raj";
+    let age = 25;
+
+    document.getElementById("hello3").textContent = fullname;
+    document.getElementById("hello4").textContent = age;
+
+    //temporal dead zone=variable declared with let and const but cannot be accessed until they are assigned value atttemoted will cause reference error
+    {
+  console.log(b); // Error: Cannot access 'b' before initialization
+  let b = 10;
+}
+
+
+    //In JavaScript, var is function-scoped and was traditionally used to declare variables. let and const are block-scoped. The key difference between let and const is that let allows for reassignment while const creates a read-only reference.
+
+console.log("Hello");
+
+
+  </script>
+</body>
+
+</html>

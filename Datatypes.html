@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number datatype</title>
+</head>
+
+<body>
+  <dl>
+    <dt>Enter your Age</dt>
+    <br/>
+    <dd><input type="text" name="" id="age" /></dd>
+    <dd id="msg"></dd>
+    <br />
+  </dl>
+  <button onclick="verifyAge()">submit</button>
+
+  <hr>
+
+  <script>
+    //program to verify that given input by user is number or not
+    function verifyAge() {
+      var age = document.getElementById("age").value;
+      if (isNaN(age)) {
+        document.getElementById("msg").innerHTML = "age must be a number";
+        document.getElementById("msg").style.color = "red";
+      } else {
+        document.getElementById("msg").innerHTML = "age verified";
+        document.getElementById("msg").style.color = "blue";
+      }
+    }
+
+    //Range of number datatype
+    var minimumRange = Number.MIN_SAFE_INTEGER;
+    var maximumRange = Number.MAX_SAFE_INTEGER;
+    document.write(minimumRange + " <br>" + maximumRange + "<br>");
+
+    //Number datatypes
+
+    //exponent
+    var d = 2e2;
+    console.log(d);
+
+    //toFixed() = how much fraction value to be displayed
+    var x = 10.012657;
+    x = x.toFixed(3);
+    console.log(x);
+
+    //toLocalString() =returns date object using local string
+    var price = 100000000;
+    document.write(
+      price.toLocaleString() +
+      " " +
+      "Converts local value to indian value" +
+      "<br>"
+    );
+
+    //to give obove value in currency
+    var price = 100000000;
+    document.write(
+      price.toLocaleString("hi-IN", { style: "currency", currency: "usd" })
+    );
+
+    //how to convert a numeric string into number
+    //parseInt = method passes a value as a string and returns the first integer
+    //parseFloat = method passes a value as a string and returns the first number(floating-point  no)
+
+    var age = parseFloat(prompt("Enter your age"));
+    document.write(
+      "<br>" + `your current age is  ${age}  year you will be ${age + 1} old <br>`
+    );
+
+    let n = "96";
+    console.log(n);
+    // console.log(typeof n);
+    var m = parseInt(n);
+    console.log(m);
+    console.log(typeof m);
+
+
+    //math object
+    //to find powerof
+    document.write(Math.pow(10, 2) + "<br>");
+    //to find square root of number
+    document.write(Math.sqrt(49) + "<br>");
+    //roundoff the given number
+    document.write(Math.round(49.122) + "<br>");
+    //always round a number down
+    document.write(Math.floor(49.11) + "<br>");
+    //always round a number up
+    document.write(Math.ceil(49.1) + "<br>");
+    //give th absolute value display how it is
+    document.write(Math.abs(49.1) + "<br>");
+    //to find minimum and maximum
+    let h = 66;
+    let j = 99;
+    let z = h + j;
+    console.log(z);
+    maximum = Math.max(h, j)
+    minimum = Math.min(h, j)
+    document.write(maximum)
+    document.write(minimum)
+
+  </script>
+</body>
+
+</html>

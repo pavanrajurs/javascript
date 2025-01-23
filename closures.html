@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //closures
+    function x() {
+      var a = 7;
+      function y() {
+        console.log(a);
+      }
+      a =100;
+      return y;
+    }
+    var z = x();
+    console.log(z);
+
+    //accessing outside of function or scope
+    z(); // Logs: 7
+
+    function x() {
+      var a = 7;
+      return function y() {
+        console.log(a);
+      }
+    }
+    var z1 = x();
+    console.log(z1);
+
+    // Example of closures
+    function outerFunction() {
+      let outerVariable = "I'm from the outer scope";
+      function innerFunction() {
+        console.log(outerVariable); // Accessing a variable from outerFunction
+      }
+      innerFunction();
+    }
+    outerFunction(); // Logs: "I'm from the outer scope
+
+    // Module scope     
+    let r = 12;
+    function f1() {
+      console.log(r);
+    }
+    f1();
+
+
+
+
+  </script>
+</body>
+
+</html>
